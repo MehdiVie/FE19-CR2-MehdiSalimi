@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  justify-content: center;
+}
+
+#nav_image_bell {
+  height: 40px;
+  margin-right: 60px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+.image_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.image_main img {
+  width: 100%;
+}
+.image_main .overlay {
+  position: absolute;
+  font-size: 1.5em;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  transition: all 0.3s ease;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  width: 20%;
+  color: #e6e6e6;
+}
+.image_main:hover .overlay {
+  background-color: rgb(143, 178, 179);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}/*# sourceMappingURL=style.css.map */
