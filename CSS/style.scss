@@ -7,6 +7,7 @@
 .container {
     margin:auto;
     justify-content: center;
+    
 }
 
 #nav_image_bell {
@@ -20,6 +21,23 @@
       padding-left: 5rem;
     }
   }
+
+#nav_above {
+
+    .new_task {
+        text-align: center;
+        border: 1px solid black;
+        margin: 20px;
+        padding: 20px;
+
+        button {
+            width: 150px;
+            padding: 30px;
+        }
+    }
+
+}
+
 
 .image_main {
 
@@ -130,6 +148,12 @@
         }
     }
 
-    
+}
 
+#myForm
+{
+   p {
+    font-weight: bold;
+    font-size: 1rem;
+   }
 }

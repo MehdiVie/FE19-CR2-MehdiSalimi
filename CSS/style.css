@@ -20,6 +20,17 @@
     padding-left: 5rem;
   }
 }
+#nav_above .new_task {
+  text-align: center;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+#nav_above .new_task button {
+  width: 150px;
+  padding: 30px;
+}
+
 .image_main {
   display: flex;
   justify-content: center;
@@ -103,4 +114,9 @@
 }
 .content .item .item_footer img {
   height: 40px;
+}
+
+#myForm p {
+  font-weight: bold;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */
