@@ -38,55 +38,71 @@
         <img id="" src="./images/main.jpg" alt="">
         <div class="overlay">Weekly Planner</div>
     </div>
-    
-    <p class="new_task">
-        <button id="btn_new">New Task</button>
-    </p>
+
 
     </div>
 </header>
 
 <main>
     <div class="content">
-        <div class="item">
-            <div class="item_header container">
-                <div class="task">
-                    <img src="./images/task.jpg" alt="">
+
+        <p class="new_task">
+            <form role="form" id="myForm" >
+                <div class="form-group row">
+                    <div class="col-md-4   my-1">
+                        
+                    </div>
+                    <div class="col-md-3   my-1">
+                        <P>Enter your new Task:</P>
+                    </div>
                 </div>
-                <div class="save">
-                    <img src="./images/save.jpg" alt="">
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label    sr-only text-end " for="">Title
+                    </label>
+                    <div class="col-md-4 my-1">
+                    <input type="text" class="form-control" id="title"  required>
+                    </div>
                 </div>
-                <div class="dots">
-                    <img src="./images/3dot.png" >
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label    sr-only  text-end" for="">Choose image</label>
+                    <div class=" col-md-3 my-1">
+                    <input type="file" class="custom-file-input" id="photo"  required>
+                    </div>
                 </div>
-            </div>
-            <div class="item_photo">
-                <img src="./images/dog_for_walk.jpg" alt="">
-            </div>
-            <div class="item_title">
-                Take the dog for a walk
-            </div>
-            <div class="item_desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur enim voluptatum blanditiis. Exercitationem officiis, 
-                <hr>
-            </div>
-            <div class="item_priority">
-                <img src="./images/danger.png" 
-                 alt="">
-                Priority level:
-                <span>1</span>
-                <br>
-                <img src="./images/calender.jpg" 
-                 alt="">
-                Deadline:
-                27.12.2023
-                <hr>
-            </div>
-            <div class="item_footer">
-                <img src="./images/delete.jpg" alt="">
-                <img src="./images/done_1.jpg" alt="">
-            </div>
-        </div>
+                <div class="form-group row">
+                    <label  class="col-md-4 col-form-label    sr-only text-nowrap  text-end" for="">Descrition</label>
+                    <div class="col-md-4 my-1">
+                    <textarea class="form-control" id="desc" rows="5"  required></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label    sr-only  text-end" for="">
+                        Priority
+                    </label>
+                    <div class="col-md-3 my-1">
+                      <select class="custom-select custom-select-sm" id="priority" required>
+                        <option disabled value="" selected>
+                            Choose Priority
+                        </option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-4 ">
+                        
+                    </div>
+                    <div class="col-md-3 my-1">
+                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </p>
     </div>
 </main>
 
