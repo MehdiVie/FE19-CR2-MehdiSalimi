@@ -9,7 +9,7 @@
     <title>My Planner</title>
 </head>
 <body>
-<div class="container-fluid">
+<div class="container">
 <header>
     <div class="container" id="nav_above">
     <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark  ">
@@ -38,75 +38,121 @@
         <img id="" src="./images/main.jpg" alt="">
         <div class="overlay">Weekly Planner</div>
     </div>
-
-
     </div>
 </header>
 
 <main>
-    <div class="content">
+    <p class="new_task">
+        <div role="form" id="myForm" >
+            <div class="form-group row">
+                <div class="col-md-4   my-1">
+                    
+                </div>
+                <div class="col-md-3   my-1">
+                    <P><h3>Enter your new Task:</h3></P>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label    sr-only text-end " for="">Title
+                </label>
+                <div class="col-md-4 my-1">
+                <input type="text" class="form-control" id="title"  required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label    sr-only  text-end" for="">Choose image</label>
+                <div class=" col-md-3 my-1">
+                <input type="file" class="custom-file-input" id="photo"  required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label  class="col-md-4 col-form-label    sr-only text-nowrap  text-end" for="">Descrition</label>
+                <div class="col-md-4 my-1">
+                <textarea class="form-control" id="desc" rows="5"  required></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label    sr-only  text-end" for="">
+                    Priority
+                </label>
+                <div class="col-md-3 my-1">
+                  <select class="custom-select custom-select-sm" id="priority" required>
+                    <option disabled value="" selected>
+                        Choose Priority
+                    </option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
 
-        <p class="new_task">
-            <form role="form" id="myForm" >
-                <div class="form-group row">
-                    <div class="col-md-4   my-1">
-                        
-                    </div>
-                    <div class="col-md-3   my-1">
-                        <P>Enter your new Task:</P>
-                    </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label    sr-only text-end " for="">Deadline
+                </label>
+                <div class="col-md-4 my-1">
+                <input type="text" class="form-control"  placeholder="DD.MM.YY"
+                id="deadline" value="13.06.2023" required>
                 </div>
-                <div class="form-group row">
-                    <label class="col-md-4 col-form-label    sr-only text-end " for="">Title
-                    </label>
-                    <div class="col-md-4 my-1">
-                    <input type="text" class="form-control" id="title"  required>
-                    </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 ">
+                    
                 </div>
-                <div class="form-group row">
-                    <label class="col-md-4 col-form-label    sr-only  text-end" for="">Choose image</label>
-                    <div class=" col-md-3 my-1">
-                    <input type="file" class="custom-file-input" id="photo"  required>
-                    </div>
+                <div class="col-md-3 my-1">
+                    <button type="button" id="submit" class="btn btn-primary">Submit</button>
                 </div>
-                <div class="form-group row">
-                    <label  class="col-md-4 col-form-label    sr-only text-nowrap  text-end" for="">Descrition</label>
-                    <div class="col-md-4 my-1">
-                    <textarea class="form-control" id="desc" rows="5"  required></textarea>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-md-4 col-form-label    sr-only  text-end" for="">
-                        Priority
-                    </label>
-                    <div class="col-md-3 my-1">
-                      <select class="custom-select custom-select-sm" id="priority" required>
-                        <option disabled value="" selected>
-                            Choose Priority
-                        </option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-md-4 ">
-                        
-                    </div>
-                    <div class="col-md-3 my-1">
-                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </p>
+            </div>
+        </div>
+    </p>
+    <div class="content_header">
+        <div id="weekly">Weekly Plan</div>
+        <div id="sort">
+            <a href="javascript:sort()">
+            Sort by Priority
+            </a>
+        </div>
     </div>
+    <div id="content" class="container-fluid">
+        
+    </div>
+    
 </main>
 
 <footer>
+    <div class="footer">
+        <div class="social_media">
+            <img src="./images/social_media.png" alt="">
+        </div>
+        <div class="newsletter">
+                    <div id="email" > 
+                        <span class="form-label d-block text-light">
+                        Sign up for our Newsletter
+                        </span>
+                    </div>
+                    <div class="col-md-4"> 
+                        <input
+                          name="email"
+                          type="email"
+                          class="form-control border-secondary bg-transparent text-light"
+                          placeholder="joe.bloggs@example.com"
+                          required
+                        />
+                    </div>
+                    <div class="subscribe">
+                    <button type="submit" class="btn btn-dark px-3 rounded-3 ">
+                    Subscribe
+                    </button>
+                    </div>
+              
+        </div>
+        <div class="copyright">
+            &copy; Copyright CodeFactory 2023
+        </div>
+    </div>
 
 </footer>
 </div>   
