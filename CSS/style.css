@@ -25,17 +25,6 @@ body {
     padding-left: 5rem;
   }
 }
-#nav_above .new_task {
-  text-align: center;
-  border: 1px solid black;
-  margin: 20px;
-  padding: 20px;
-}
-#nav_above .new_task button {
-  width: 150px;
-  padding: 30px;
-}
-
 .image_main {
   display: flex;
   justify-content: center;
@@ -66,6 +55,8 @@ body {
   justify-content: space-between;
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .content_header a {
   text-decoration: none;
@@ -104,31 +95,11 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  justify-content: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  padding-top: 20px;
   background: #e6e6e6;
-  gap: 30px;
-}
-#content .item {
-  width: 350px;
-  border: 2px solid black;
-}
-#content .item .item_header {
-  display: flex;
-  margin-bottom: 5px;
-}
-#content .item .item_header .task {
-  margin-left: 0px;
-}
-#content .item .item_header .save {
-  margin-left: auto;
-  margin-right: 10px;
-}
-#content .item .item_header .dots {
-  margin-left: 10px;
-}
-#content .item .item_header img {
-  display: block;
-  height: 20px;
+  gap: 20px;
 }
 #content .item .item_photo img {
   display: block;
@@ -141,7 +112,8 @@ body {
   text-align: center;
 }
 #content .item .item_desc {
-  text-align: center;
+  text-align: left;
+  padding: 3px;
   margin-bottom: 8px;
 }
 #content .item .item_priority {
@@ -155,17 +127,31 @@ body {
   width: 25px;
   text-align: center;
 }
-#content .item .item_footer {
-  text-align: right;
+#content .item .item_priority .importance {
+  border-radius: 4px;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 3px;
 }
-#content .item .item_footer a {
-  text-decoration: none;
+#content .item .item_footer {
+  justify-content: right;
+  text-align: right;
 }
 #content .item .item_footer img {
   height: 40px;
 }
 
-#myForm p {
-  font-weight: bold;
-  font-size: 1rem;
+@media screen and (max-width: 1200px) {
+  #content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 900px) {
+  #content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  #content {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
